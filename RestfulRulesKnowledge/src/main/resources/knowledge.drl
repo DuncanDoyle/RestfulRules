@@ -1,0 +1,23 @@
+//created on: Jan 22, 2014
+package org.jboss.ddoyle.restfulrules.knowledge
+
+//list any import classes here.
+import org.jboss.ddoyle.restfulrules.model.Person;
+
+rule "FindDuncan" 
+	when
+		$p: Person(name == "Duncan")
+	then 
+		System.out.println("Found Duncan: " + $p.getName() + " " + $p.getSurname());
+end
+
+rule "FindDoyle" 
+	when
+		$p: Person(surname == "Doyle")
+	then 
+		System.out.println("Found Doyle: " + $p.getName() + " " + $p.getSurname());
+end
+
+	
+
+
